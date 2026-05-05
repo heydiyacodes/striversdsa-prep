@@ -1,0 +1,16 @@
+//pseudocode only
+int dp[n];
+  dp[0]=0;
+  for(int i=1;i<n;i++){
+    minsteps= INT_MAX;
+
+    for(int j=i;j<=k;j++){
+      if(i-j>=0){
+        jump=dp[i-j]+abs(a[ind]-a[ind-j]);
+        minsteps=min(minsteps,jump);
+      }
+      dp[i]=minsteps;
+    }
+
+    //print
+    print(dp[n-1]);
